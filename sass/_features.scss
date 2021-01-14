@@ -1,0 +1,251 @@
+%img-before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0;
+    transition: all .5s;
+}
+
+%imgs{
+    background-size: cover;
+    transition: all .3s;
+    position: relative;
+    z-index: 1;
+}
+
+%imgs-hover{
+    opacity: 1;
+    outline: 3px solid white;
+    outline-offset: -30px;
+}
+
+
+// END OF EXTENDS - START OF ACTUAL CSS STYLE
+
+.features{
+    margin: 12rem 0 ;
+    border-radius: .5rem;
+    background-color: var(--gray-1);
+
+    grid-row: 4 / 5;
+    grid-column: center-start / center-end;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    grid-auto-rows: min-content;
+    grid-gap: 4rem;
+
+    &__btn{
+        grid-column: 2 / 3;
+        }
+    }
+
+.feature{
+    display: grid;
+    transition: all .2s;
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        border-radius: .5rem;
+        overflow: hidden;
+
+        &--caption{
+            font-size: 2.4rem;
+            color: var(--gray-1);
+            font-family: var(--font-primary);
+            margin-bottom: 3rem;
+            text-align: center;
+            opacity: 0;
+            backface-visibility: hidden;
+            transition: all .3s;
+            font-weight: 600;
+            z-index: 10;
+        }
+    
+        &:hover &--caption{
+            transform: translate(0, 10rem);
+            opacity: 1;
+        }
+    }
+
+    ////// IMAGES STYLING
+
+    &__img--1{
+        @extend %imgs;
+
+        height: 26rem;
+        background-image: url(../img/depilacao_a_laser.jpg);
+    }
+
+    &__img--1::before{ // keep this effect forever !!!!!
+        @extend %img-before;
+
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/depilacao_a_laser.jpg);
+    }
+
+    &__img--1:hover::before{
+        @extend %imgs-hover;
+    }
+
+
+    &__img--2{
+        @extend %imgs;
+
+        height: 26rem;
+        background-image: url(../img/Carboxiterapia-620x330.jpg);
+    }
+
+    &__img--2::before{ // keep this effect forever !!!!!
+        @extend %img-before;
+
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/Carboxiterapia-620x330.jpg);
+    }
+
+    &__img--2:hover::before{
+        @extend %imgs-hover;
+    }
+
+
+    &__img--3{
+        @extend %imgs;
+
+        height: 26rem;
+        background-image: url(../img/corrente-russa-620x330.jpg);
+    }
+
+    &__img--3::before{ // keep this effect forever !!!!!
+        @extend %img-before;
+
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/corrente-russa-620x330.jpg);
+    }
+
+    &__img--3:hover::before{
+        @extend %imgs-hover;
+    }
+
+
+    &__img--4{
+        @extend %imgs;
+
+        height: 26rem;
+        background-image: url(../img/criolipolise.jpeg);
+    }
+
+    &__img--4::before{ // keep this effect forever !!!!!
+        @extend %img-before;
+
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/criolipolise.jpeg);
+    }
+
+    &__img--4:hover::before{
+        @extend %imgs-hover;
+    }
+
+
+    &__img--5{
+        @extend %imgs;
+
+        height: 26rem;
+        background-image: url(../img/serv_est_drenagemLinfatica.jpg);
+    }
+
+    &__img--5::before{ // keep this effect forever !!!!!
+        @extend %img-before;
+
+        height: 26rem;
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/serv_est_drenagemLinfatica.jpg);
+    }
+
+    &__img--5:hover::before{
+        @extend %imgs-hover;
+    }
+
+
+    &__img--6{
+        @extend %imgs;
+
+        height: 26rem;
+        background-image: url(../img/massagem-express.jpg);
+    }
+
+    &__img--6::before{ // keep this effect forever !!!!!
+        @extend %img-before;
+
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/massagem-express.jpg);
+    }
+
+    &__img--6:hover::before{
+        @extend %imgs-hover;
+    }
+
+
+    &__img--7{
+        @extend %imgs;
+
+        height: 26rem;
+        background-image: url(../img/preenchimento.jpg);
+    }
+
+    &__img--7::before{ // keep this effect forever !!!!!
+        @extend %img-before;
+
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/preenchimento.jpg);
+    }
+
+    &__img--7:hover::before{
+        @extend %imgs-hover;
+    }
+
+
+    &__img--8{
+        @extend %imgs;
+
+        height: 26rem;
+        background-image: url(../img/heccus.jpg);
+    }
+
+    &__img--8::before{ // keep this effect forever !!!!!
+        @extend %img-before;
+
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/heccus.jpg);
+    }
+
+    &__img--8:hover::before{
+        @extend %imgs-hover;
+    }
+
+
+    &__img--9{
+        @extend %imgs;
+
+        height: 26rem;
+        background-image: url(../img/microagulhamento.jpg);
+    }
+
+    &__img--9::before{ // keep this effect forever !!!!!
+        @extend %img-before;
+
+        background-image: linear-gradient(rgba(#510722, .9),
+        rgba(#892543, .9)) ,url(../img/microagulhamento.jpg);
+    }
+
+    &__img--9:hover::before{
+        @extend %imgs-hover;
+
+    }
+
+}

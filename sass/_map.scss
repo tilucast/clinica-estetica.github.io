@@ -1,0 +1,17 @@
+.map{
+    grid-row: 8 / 9;
+    grid-column: full-start / full-end;
+
+    padding: 5rem 0;
+    text-align: center;
+    margin-top: 6.5rem;
+
+    &__heading-2{
+        margin-bottom: 5rem;
+        color: var(--gray-darker-3);
+    }
+}
+
+iframe{
+    width: 80rem;
+}

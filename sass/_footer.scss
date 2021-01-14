@@ -1,0 +1,33 @@
+.footer{
+    padding: 3rem;
+
+    grid-row: 9 / 10;
+    grid-column: full-start / full-end;
+    background-color: var(--color-primary);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__copyright{
+        p{
+            font-size: 1.8rem;
+            color: var(--gray-3);
+        }
+    }
+
+    &__links{
+        
+        svg{
+            width: 4.5rem;
+            height: 4.5rem;
+            margin-right: 2rem;
+            transition: all .2s;
+            fill: black;
+
+            &:hover{
+                fill: var(--gray-3);
+            }
+        }
+    }
+}
